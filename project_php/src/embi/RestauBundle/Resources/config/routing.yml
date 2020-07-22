@@ -1,0 +1,54 @@
+embi_restau_homepage:
+    path:     /hello
+    defaults: { _controller: embiRestauBundle:Default:index }
+
+site_homepage:
+    path:     /index
+    defaults: { _controller: embiRestauBundle:Restau:index }
+    methods: GET
+
+plats_page:
+    path:     /plats
+    defaults: { _controller: embiRestauBundle:Restau:plats }
+    methods: [GET,POST]
+
+plats_voir_page:
+    path:     /plat/{id}
+    defaults: { _controller: embiRestauBundle:Restau:showPlat }
+    methods: [GET,POST]
+
+plat_creer_page:
+    path:     /plats/creer
+    defaults: { _controller: embiRestauBundle:Restau:createPlat }
+    methods: [GET,POST]
+
+plat_modifier_page:
+    path:     /plats/modifier/{id}
+    defaults: { _controller: embiRestauBundle:Restau:editPlat }
+    methods: [GET,POST]
+
+plat_supprimer_page:
+    path:     /plats/supprimer/{id}
+    defaults: { _controller: embiRestauBundle:Restau:deletePlat }
+    methods: [GET,POST]
+
+commandes_page:
+    path:     /commandes
+    defaults: { _controller: embiRestauBundle:Restau:commandes }
+    methods: [GET,POST]
+creer_commandes_page:
+    path:     /commandes/creer
+    defaults: { _controller: embiRestauBundle:Restau:createCommandes }
+    methods: [GET,POST]
+voir_commandes_page:
+    path:     /commandes/voir/{id}
+    defaults: { _controller: embiRestauBundle:Restau:showCommandes }
+    methods: [GET,POST]
+modifier_commandes_page:
+    path:     /commandes/modifier/{id}
+    defaults: { _controller: embiRestauBundle:Restau:editCommandes }
+    methods: [GET,POST]
+supprimer_commandes_page:
+    path:     /commandes/supprimer/{id}
+    defaults: { _controller: embiRestauBundle:Restau:deleteCommande }
+    methods: [GET,POST]

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a class="btn btn-default" href="/plats">Retour</a>
+    <h1>Modifier un plat</h1>
+    {{ form_start(formPlat) }}
+    {{ form_widget(formPlat) }}
+    <button type="submit" class="btn btn-primary">Modifier le plat</button>
+    {{ form_end(formPlat) }}
+
+{% endblock %}

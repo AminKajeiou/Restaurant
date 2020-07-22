@@ -1,0 +1,4 @@
+services:
+#    embi_restau.example:
+#        class: embi\RestauBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

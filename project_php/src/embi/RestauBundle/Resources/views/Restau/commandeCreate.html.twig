@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a class="btn btn-default" href="/commandes">Retour</a>
+    <h1>Ajouter une nouvelle commande</h1>
+    {{ form_start(formCommande) }}
+        <div class="form-group">
+            <label for="">Numéro de table</label>
+            {{ form_widget(formCommande.NumeroTable) }}
+            <label for="">Plats</label>
+            {{ form_widget(formCommande.Plats_id) }}
+        </div>
+    {{ form_widget(formCommande) }}
+    <button type="submit" class="btn btn-primary">Ajouter la commande</button>
+    {{ form_end(formCommande) }}
+{% endblock %}

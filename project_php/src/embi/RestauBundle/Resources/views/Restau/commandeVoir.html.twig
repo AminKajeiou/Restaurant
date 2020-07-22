@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a class="btn btn-default" href="/commandes">Retour</a>
+    <h2 class="page-header">Numéro de commande {{ commande.id }}</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Sur place: {% if commande.surPlace %}Oui{% else %}Non{% endif%}</li>
+        <li class="list-group-item">Numéro de table: {{ commande.numeroTable }}</li>
+        <li class="list-group-item">Date: {{ commande.date | date('d-m-Y H:i:s') }} </li>
+        <li class="list-group-item">Plat: {{ plat.Nom }}</li>
+    </ul>
+{% endblock %}

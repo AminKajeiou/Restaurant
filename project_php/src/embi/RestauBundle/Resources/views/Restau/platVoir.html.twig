@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a class="btn btn-default" href="/plats">Retour</a>
+    <hr>
+    <h2 class="page-header">{{ plat.Nom }}</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Ingrédients: {{ plat.Ingredients }}</li>
+        <li class="list-group-item">Prix: {{ plat.Prix }}</li>
+        <li class="list-group-item">Disponible: {% if plat.estDisponible %}Oui{% else %}Non{% endif%} </li>
+    </ul>
+{% endblock %}

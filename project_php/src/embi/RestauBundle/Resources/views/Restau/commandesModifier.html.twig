@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a class="btn btn-default" href="/commandes">Retour</a>
+    <h1>Modifier la commande</h1>
+    {{ form_start(formCommande) }}
+    {{ form_widget(formCommande) }}
+    <button type="submit" class="btn btn-primary">Modifier la commande</button>
+    {{ form_end(formCommande) }}
+{% endblock %}

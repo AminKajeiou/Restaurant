@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Plats</th>
+            <th>#</th>
+            <th>Nom</th>
+            <th>Ingredients</th>
+            <th>Prix</th>
+            <th>Disponible</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for plat in plats %}
+            <tr>
+                <th scope="row"></th>
+                <th>{{ plat.id }}</th>
+                <td>{{ plat.nom }}</td>
+                <td>{{ plat.ingredients }}</td>
+                <td>{{ plat.prix }}</td>
+                <td>{{ plat.estDisponible }}</td>
+                <td>
+                    <a href="plat/{{ plat.id }}" class="btn btn-success">Voir</a>
+                    <a href="plats/modifier/{{ plat.id }}" class="btn btn-default">Modifier</a>
+                    <a href="plats/supprimer/{{ plat.id }}" class="btn btn-danger">Supprimer</a>
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="/plats/creer" class="btn btn-success">Ajouter un nouveau plat</a>
+{% endblock %}
